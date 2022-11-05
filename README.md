@@ -31,5 +31,5 @@
 
 ## Reference
 
-- (Mkdocs)[https://www.mkdocs.org/]
-- (Material for Mkdocs)[https://squidfunk.github.io/mkdocs-material/]
+- [Mkdocs](https://www.mkdocs.org/)
+- [Material for Mkdocs](https://squidfunk.github.io/mkdocs-material/)
