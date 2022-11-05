@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "note-mkdocs"
+version = "0.1.0"
+description = ""
+authors = ["neruo <neruo@neruo.com>"]
+readme = "README.md"
+packages = [{include = "note_mkdocs"}]
+
+[tool.poetry.dependencies]
+python = "^3.9,<3.10"
+mkdocs-material = "8.5.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

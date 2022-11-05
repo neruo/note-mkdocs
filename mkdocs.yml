@@ -1,0 +1,12 @@
+site_name: note mkdocs
+theme:
+  name: material
+  language: ja
+  features:
+    - content.code.annotate # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#configuration
+  - pymdownx.inlinehilite   # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#configuration
+  - pymdownx.snippets       # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#configuration
+  - pymdownx.superfences    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#configuration
