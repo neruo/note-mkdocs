@@ -3,10 +3,98 @@ theme:
   name: material
   language: ja
   features:
-    - content.code.annotate # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
+    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
+    - content.code.annotate
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
+    - navigation.tabs
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#sticky-navigation-tabs
+    - navigation.tabs.sticky
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-suggestions
+    - search.suggest
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-highlighting
+    - search.highlight
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-sharing
+    - search.share
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation#section-index-pages
+    - navigation.indexes
+  icon:
+    repo: fontawesome/brands/git-alt 
+
+  palette:
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle
+    - scheme: default
+      primary: teal   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
+      accent: orange  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#accent-color
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
+      accent: orange  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#accent-color
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
 markdown_extensions:
+  # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#configuration
   - pymdownx.highlight:
-      anchor_linenums: true # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#configuration
-  - pymdownx.inlinehilite   # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#configuration
-  - pymdownx.snippets       # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#configuration
-  - pymdownx.superfences    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#configuration
+      anchor_linenums: true 
+  - pymdownx.inlinehilite
+  - pymdownx.snippets 
+  - pymdownx.superfences
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#footnotes
+  - footnotes
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#arithmatex
+  - pymdownx.arithmatex:
+      generic: true
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#caret-mark-tilde
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#emoji
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#keys
+  - pymdownx.keys
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  # https://squidfunk.github.io/mkdocs-material/reference/images/
+  - attr_list
+  - md_in_html
+
+# https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#arithmatex
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#built-in-search-plugin
+  - search:
+      lang: 
+        - ja
+        - en
+  # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+  # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
+  - glightbox
+
+repo_url: https://github.com/squidfunk/mkdocs-material
+repo_name: squidfunk/mkdocs-material
+
+nav:
+  - Home: index.md
+  - Write:
+    - "mkdocs 環境を構築する": write/enviroment.md
