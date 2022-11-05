@@ -1,6 +1,6 @@
 # note-mkdocs
 
-このリポジトリは、mkdocsを手軽に使う方法についてまとめたリポジトリ
+このリポジトリは、mkdocsを手軽に使う方法についてまとめたリポジトリです
 
 ## Motivation
 
@@ -24,9 +24,9 @@
 - issueのセクション：各記事のセクション、mkdocs におけるサイドバー（セカンダリ）
 - milestone: 各記事のカテゴリ、mkdocs におけるナビゲーションバー
 - project：書く記事（issue）を管理するカンバンボード
-   - ToDo：これから書く記事
-   - In Progress：今書いている記事（WIP：4）
-   - Done：書き終えた記事
+  - ToDo：これから書く記事
+  - In Progress：今書いている記事（WIP：4）
+  - Done：書き終えた記事
 - branch：現在書いている最中の記事
 
 ## Reference
