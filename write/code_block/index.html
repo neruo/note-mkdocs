@@ -37,7 +37,7 @@
 </div>
 <header class="md-header md-header--lifted" data-md-component="header">
 <nav aria-label="ヘッダー" class="md-header__inner md-grid">
-<a aria-label="Note MkDocs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Note MkDocs">
+<a aria-label="Note MkDocs" class="md-header__button md-logo" data-md-component="logo" href="https://neruo.github.io/note-mkdocs/" title="Note MkDocs">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -139,7 +139,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="ナビゲーション" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Note MkDocs" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Note MkDocs">
+<a aria-label="Note MkDocs" class="md-nav__button md-logo" data-md-component="logo" href="https://neruo.github.io/note-mkdocs/" title="Note MkDocs">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     Note MkDocs
@@ -220,6 +220,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../code_inline/">
+        コードインラインを書く
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -269,13 +274,10 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/neruo/note-mkdocs/edit/master/docs/write/code_block.md" title="編集">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="_1">コードブロックを書く</h1>
 <p>関数やクラスなど、まとまったコードを説明したいときがあります。
-コードブロックは、まとまったコードをハイライト付きで読み手に示す方法です。
-本ページでは、mkdocs でコードブロックを書く方法について説明します。</p>
+コードブロックは、まとまったコードをハイライト付きで読み手に表示する方法です。
+本ページでは、コードブロックを書く方法について説明します。</p>
 <h2 id="_2">書く準備</h2>
 <p>はじめに、<code>mkdcos.yml</code> で次の <code>markdown_extensions</code> を有効にしておきます。</p>
 <div class="highlight"><span class="filename">mkdocs.yml</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span><span class="w"></span>
@@ -286,8 +288,8 @@
 <a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.superfences</span><span class="w"></span>
 </code></pre></div>
 <h2 id="_3">書き方の一例</h2>
-<p>mkdocs では、3つのバッククォートでコードを囲うことで、次のようにコードブロックを書くことができます。
-ここでは、<a href="https://squidfunk.github.io/mkdocs-material/reference/code-blocks/?h=code+blocks#adding-a-title">バブルソート関数</a>を題材に、その一例を示しています。</p>
+<p>コードブロックは、コードを3つのバッククォートで囲うことで、書くことができます。
+ここでは、<a href="https://squidfunk.github.io/mkdocs-material/reference/code-blocks/?h=code+blocks#adding-a-title">バブルソート関数</a>を題材に、コードブロックの一例を示しています。</p>
 <div class="highlight"><span class="filename">コードブロック</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>``` python
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>def bubble_sort(items):
 <a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>    for i in range(len(items)):
@@ -308,7 +310,7 @@
 コードブロック内の右上のアイコンをクリックすると、コードブロックがテキストとしてコピーされます。</p>
 <h2 id="_4">オプション</h2>
 <p>コードブロックには、次のようなオプションをつけることができます。
-このようなオプションをつけると、次のようにコードブロックをかっこよくできます。</p>
+このようなオプションをつけると、次のようにコードブロックをカッコよく飾ることができます。</p>
 <figure>
 <table>
 <thead>
@@ -354,7 +356,7 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <h2 id="_5">おわりに</h2>
-<p>本ページでは、mkdocs でコードブロックを書く方法について説明しました。
+<p>本ページでは、コードブロックを書く方法について説明しました。
 さらに詳細に知りたい方は、ぜひ参考文献を調べてみてください。</p>
 <h2 id="_6">参考文献</h2>
 <ul>
@@ -387,6 +389,19 @@
             </div>
 </div>
 </a>
+<a aria-label="次: コードインラインを書く" class="md-footer__link md-footer__link--next" href="../code_inline/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                次
+              </span>
+              コードインラインを書く
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
 </nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
@@ -405,7 +420,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight", "search.share", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.expand"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
 <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
