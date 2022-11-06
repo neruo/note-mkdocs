@@ -1,7 +1,9 @@
-site_name: note mkdocs
+site_name: Note MkDocs
 theme:
   name: material
   language: ja
+  icon:
+    logo: material/sheep
   features:
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
     - content.code.annotate
@@ -91,10 +93,12 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox
 
-repo_url: https://github.com/squidfunk/mkdocs-material
-repo_name: squidfunk/mkdocs-material
+repo_url: https://github.com/neruo/note-mkdocs
+repo_name: neruo/note-mkdocs
 
 nav:
   - Home: index.md
   - Write:
     - "mkdocs 環境を構築する": write/enviroment.md
+    - "コードブロックを書く": write/code_block.md
+  
