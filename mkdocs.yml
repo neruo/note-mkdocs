@@ -3,7 +3,10 @@ theme:
   name: material
   language: ja
   icon:
+    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo
     logo: material/sheep
+    # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository-icon
+    repo: fontawesome/brands/git
   features:
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
     - content.code.annotate
@@ -19,6 +22,8 @@ theme:
     - search.share
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation#section-index-pages
     - navigation.indexes
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=#navigation-expansion
+    - navigation.expand
   icon:
     repo: fontawesome/brands/git-alt 
 
@@ -36,6 +41,10 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
+extra:
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo
+  homepage: https://neruo.github.io/note-mkdocs/
 
 markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#configuration
@@ -93,12 +102,15 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox
 
+# https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/
 repo_url: https://github.com/neruo/note-mkdocs
 repo_name: neruo/note-mkdocs
+edit_uri: ""
 
 nav:
   - Home: index.md
   - Write:
     - "mkdocs 環境を構築する": write/enviroment.md
     - "コードブロックを書く": write/code_block.md
+    - "コードインラインを書く": write/code_inline.md
   
